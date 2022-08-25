@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+
+<input>
+	<button>Contar Moedas!</button>
+</input>
+
+<script type="text/javascript">
+	
+	var moedas= document.querySelector('input');
+	var button=document.querySelector('button');
+
+	function calculaMoedas(){
+
+
+		moedasCalculo= moedas.value*100;
+		console.log(moedasCalculo);
+
+
+		moedaDe50=parseInt(moedasCalculo/50);
+		moedasCalculo=parseInt(moedasCalculo%50);
+
+		moedaDe25=parseInt(moedasCalculo/25);
+		moedasCalculo=parseInt(moedasCalculo%25);
+
+		moedasDe10=parseInt(moedasCalculo/10);
+		moedasCalculo=parseInt(moedasCalculo%10);
+
+		moedasde5=parseInt(moedasCalculo/5);
+		moedasCalculo=parseInt(moedasCalculo%5);
+
+		moedasde1=parseInt(moedasCalculo/1);
+
+		var totalDeMoedas=moedaDe50+moedaDe25+moedasDe10+moedasde5+moedasde1;
+
+		document.write("<br>Total de moedas: " +totalDeMoedas +"<br>Sendo:<br>");
+		document.write(moedaDe50+" De 50 centavos<br>");
+		document.write(moedaDe25+" De 25 centavos<br>");
+		document.write(moedasDe10+" De 10 centavos<br>");
+		document.write(moedasde5+" De 5 centavos<br>");
+		document.write(moedasde1+  "De 1 centavos<br>")
+
+	}
+
+
+	button.onclick = calculaMoedas;
+
+
+
+
+</script>
